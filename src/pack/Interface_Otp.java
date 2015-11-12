@@ -104,10 +104,9 @@ public class Interface_Otp extends JDialog {
 		Эти методы могут непосредственно работать только с локальными и статическими переменными. 
 		 */
 		setTitle("Расчет отпускных");
-		setSize(360, 510); // указывает ширину и высоту.
+		setSize(400, 550); // указывает ширину и высоту.
 		setLocationRelativeTo(null);//установить посередине экрана
-		setResizable(false); //запрет на расширение окна 
-		
+
 		getContentPane().setLayout(new BorderLayout());
 		
 		//Панель с кнопками Рассчитать заново и Закрыть
