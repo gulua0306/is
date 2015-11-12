@@ -124,7 +124,7 @@ public class Interface extends JFrame {
 				и существует специальная конструкция try {} catch {}				 
 					*/
                 //попытка преобразовать текст в целое число
-                //int num = Integer.parseInt(jtxt.getText());
+                int num = Integer.parseInt(jtxt.getText());
 
                 //если все нормально - возвращаем true
                 return true;
