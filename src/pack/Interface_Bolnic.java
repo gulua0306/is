@@ -105,10 +105,9 @@ public class Interface_Bolnic extends JDialog {
 		 */
 
 		setTitle("Расчет больничного");
-		setSize(360, 510); // указывает ширину и высоту.
+		setSize(400, 550); // указывает ширину и высоту.
 		setLocationRelativeTo(null);//установить посередине экрана
-		setResizable(false); //запрет на расширение окна 
-		
+
 		getContentPane().setLayout(new BorderLayout());
 		
 		//Панель с кнопками Рассчитать заново и Закрыть
