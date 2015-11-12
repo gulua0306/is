@@ -208,6 +208,85 @@ public class Zarpl extends JPanel { /*	(Public)модификатор досту
     	Box_500 = new JCheckBox("");  /* Создание компонента флажка для стандартного вычета в размере 500 руб. */
     	Box_500.setToolTipText("Подробнее в Налоговом кодексе РФ, статья 218");// всплывающая подсказка при наведении на компонент флажок.
     	
+    	    	Text_oklad.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+    	
+    	Text_dni.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+
+    	Text_rab_dni.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+   
+    	Text_kol_det.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+    	
+    	
+    	Text_do_18.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+    	
+    	Text_prem.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+        
         // слушатели для кнопок
         //добавить кнопки на панели
     	PokazZarp.add(PokazRasBut);  	/* 	PokazZarp - кнопка "Рассчитать заработную плату"
