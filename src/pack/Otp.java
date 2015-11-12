@@ -158,6 +158,31 @@ public class Otp extends JPanel {/*	(Public)модификатор доступ�
     	Text_dni_otp.setMargin(new Insets(2, 7, 2, 7));//установка внутренних отступов для текстового поля (2-верхний отступ, 5-левый, 2-нижний, 5-правый)
     	Text_dni_otp.setToolTipText("Введите количество дней отпуска");//всплывающая подсказка при наведении на текстовое поле
   
+         	Text_1year.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+    	Text_dni_otp.setInputVerifier(new InputVerifier() {
+            public boolean verify(JComponent comp) {
+                JTextField textField = (JTextField) comp;
+                try {
+                    Integer.parseInt(textField.getText());
+                    return true;
+                } catch (NumberFormatException e) {
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                return false;
+            }
+        });
+        
                //добавить кнопки на панели
     	PokazOtp.add(PokazOtpBut); // добавляем кнопку PokazRasBut на панель PokazZarp
     	/* 	PokazOtpBut - кнопка "Рассчитать отпускные"
